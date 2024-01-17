@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* font-family: 'Inter', sans-serif; */
+/* font-family: 'Noto Sans', sans-serif; */
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.bg-container{
+    background-color: "#fff";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.heading{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.categorys{
+    display: flex;
+    gap: 10px;
+    margin: 15px 5px;
+    cursor: pointer;
+}
+.category{
+    text-align: center;
+    width: auto;
+    min-width: 150px;
+    padding: 8px 20px;
+    align-self: center;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 22px;
+}
+.active{
+    color: white;
+    background-color: black;
+}
+.non-active{
+    background-color: rgb(245, 236, 236);
+    color: black;
+}
+.icon{
+    height: 10%;
+    width: 25px;
+    padding: 0px 5px;
+    align-items: baseline;
+}
+.no-icon{
+    display: none;
+}
+.products-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.product{
+    margin: 10px;
+    padding: 3px;
+    position: relative;
+    /* min-width: 200px; */
+    min-width: 210px;
+    max-width: 230px;
+    
+}
+.image{
+    height: 300px;
+    width: 250;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.badge{
+    position: absolute;
+    color: black;
+    background-color: #fff;
+    padding: 5px 8px;
+    top: -2px;
+    left: 8px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.title-company, .price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100% ;
+    align-items: baseline;
+    /* text-align: center; */
+}
+.title{
+    /* overflow-wrap: break-word; */
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    max-width: 60%; /* Ensures the title won't overflow its container */
+}
+.vendor{
+    font-weight: 600;
+}
+
+.current-price{
+    font-size: 14px;
+    font-weight: 700;
+}
+.mrp{
+    font-size: 14px;
+    text-decoration: line-through;
+    font-weight: 600;
+    color: #71757f;
+}
+.discount{
+    font-size: 14px;
+    font-weight: 700;
+    color: red;
+}
+.off-style{
+    color: #bf4f62 ;
+    font-weight: 600;
+}
+
+.button{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #1d1e22 ;
+    color: #fff;
+    cursor: pointer;
+}

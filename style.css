@@ -17,7 +17,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 20px; */
     
 }
 .heading{
@@ -40,7 +39,6 @@ body{
 .category{
     text-align: center;
     width: auto;
-    /* min-width: 150px; */
     padding: 8px 20px;
     align-self: center;
     border-radius: 5px;
@@ -69,12 +67,12 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 .product{
     margin: 10px;
     padding: 3px;
     position: relative;
-    /* min-width: 180px;*/
     max-width: 200px; 
     
 }
@@ -101,18 +99,13 @@ body{
     justify-content: space-around;
     width: 100% ;
     align-items: baseline;
-    /* margin-bottom: 0; */
-    /* text-align: center; */
 }
-.price{
-    /* margin-top: 0; */
-}
+
 .title{
-    /* overflow-wrap: break-word; */
     white-space: nowrap;
     overflow: hidden; 
     text-overflow: ellipsis;
-    max-width: 60%; /* Ensures the title won't overflow its container */
+    max-width: 60%; 
 }
 .vendor{
     font-weight: 600;
@@ -149,9 +142,25 @@ body{
     color: #fff;
     cursor: pointer;
 }
+.loading{
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 6px;
+    border: 5px solid blueviolet;
+    border-bottom: transparent;
+    animation: rotate 1s  infinite linear;
+}
+
+@keyframes rotate {
+    100%{
+        transform: rotate(1turn);
+    }
+    
+}
 
 /* styling for up to 767px */
-@media screen and (min-width:1024px)  {
+@media screen and (min-width:1024px){
     .heading{
         /* margin-top: 8%; */
         font-size: 5vh;
@@ -161,18 +170,17 @@ body{
         margin: 10px;
         font-size: 3vh;
     }
-    .products
+    .products{
         width: 95w;
         height: 50vh;
     }
     .image{
-        /* height: 20vh; */
         width: 100%;
         border-radius: ;
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
     .categorys{
         margin: none;
         gap: none;
@@ -181,7 +189,6 @@ body{
     .category{
         padding: none;
         width: 120px;
-        /* flex-wrap: nowrap; */
         max-height: 20px;
     }
     .icon{
@@ -200,7 +207,5 @@ body{
         padding: 10px 50px;
         margin: 10px;
     }
-    .product{
-        /* max-width: 20%; */
-    }
+    
 }

@@ -3,13 +3,13 @@ let womenEl = document.getElementById("Women");
 let kidsEl = document.getElementById("Kids");
 let rootEl = document.getElementById("root");
 let mainDivEl = document.getElementById("main");
+let loaderEl = document.getElementById("loader");
 
 const menIconEl = document.getElementById('menIcon');
 const womenIconEl = document.getElementById('womenIcon');
 const kidsIconEl = document.getElementById('kidsIcon');
 
 let productDetails;
-let allCategories;
 let presentCategory = "Men";
 let count = 0;
 
@@ -27,6 +27,7 @@ menIconEl.classList.remove('no-icon')
 womenIconEl.classList.add('no-icon')
 kidsIconEl.classList.add('no-icon')
 
+loaderEl.style.display = 'block'
 menEl.addEventListener("click", function(){
     presentCategory = "Men";
     productDetails = '';
@@ -99,7 +100,7 @@ kidsEl.addEventListener("click", function(){
 
 
 });
-
+changeCategory
 
 // https://cdn.shopify.com/s/files/1/0564/3685/0790/files/multiProduct.json
 // API call 
@@ -118,25 +119,19 @@ async function getCategoryDetails() {
 }
 
 function changeCategory(){
-    // console.log(productDetails)
+    loaderEl.style.display = "block";
     productDetails = '';
 
-
+    // 2. calling getCategoryDetails function 
 
     getCategoryDetails().then(categories => {
-        categories;
-        // console.log(categories.categories)
         const diffCategories = categories.categories;
-        // console.log(diffCategories[0])
-        allCategories = diffCategories;
 
         for (let cate of diffCategories){
             if (cate.category_name === presentCategory){
-                let products = cate.category_products ;
-                productDetails = products;
-                // console.log(productDetails);
+                productDetails = cate.category_products ;
 
-                // creating and appending products to root div 
+                // 3. creating and appending products to root div 
                 addProductDetails()
             }
         }
@@ -144,9 +139,9 @@ function changeCategory(){
 };
 
 function addProductDetails(){
-    
-    
 
+    // creating and appending El using DOM 
+    
     for (let i=0; i < productDetails.length; i++){
         // console.log(productDetails[i])
         let item = productDetails[i]
@@ -227,6 +222,7 @@ function addProductDetails(){
         btnEl.textContent = "Add to Cart";
         productEl.appendChild(btnEl)
 
+        loaderEl.style.display = "none";
 
         // priceDivEl.appendChild(productEl)
         mainDivEl.appendChild(productEl)
@@ -235,5 +231,5 @@ function addProductDetails(){
     
 
 }
-// initially calling fun to get products 
+// 1. initially calling fun to get products 
 changeCategory()

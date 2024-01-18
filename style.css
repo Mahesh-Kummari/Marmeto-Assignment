@@ -17,13 +17,15 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* margin-bottom: 20px; */
     
 }
 .heading{
     font-size: 32px;
     font-weight: 700;
     align-self: center;
-    margin-top: 25px;
+    text-align: center;
+    
 }
 
 .categorys{
@@ -44,6 +46,7 @@ body{
     border-radius: 5px;
     font-weight: 600;
     font-size: 22px;
+    flex-wrap: nowrap;
 }
 .active{
     color: white;
@@ -71,8 +74,8 @@ body{
     margin: 10px;
     padding: 3px;
     position: relative;
-    min-width: 180px;
-    max-width: 200px;
+    /* min-width: 180px;*/
+    max-width: 200px; 
     
 }
 .image{
@@ -150,7 +153,7 @@ body{
 /* styling for up to 767px */
 @media screen and (min-width:1024px)  {
     .heading{
-        margin-top: 8%;
+        /* margin-top: 8%; */
         font-size: 5vh;
     }
     .category{
@@ -158,12 +161,12 @@ body{
         margin: 10px;
         font-size: 3vh;
     }
-    .products-container{
-        width: 10vw;
-        height: 20vh;
+    .products
+        width: 95w;
+        height: 50vh;
     }
     .image{
-        height: 20vh;
+        /* height: 20vh; */
         width: 100%;
         border-radius: ;
     }

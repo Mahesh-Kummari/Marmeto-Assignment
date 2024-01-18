@@ -22,18 +22,23 @@ body{
 .heading{
     font-size: 32px;
     font-weight: 700;
+    align-self: center;
+    margin-top: 25px;
 }
 
 .categorys{
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     margin: 15px 5px;
     cursor: pointer;
+
 }
 .category{
     text-align: center;
     width: auto;
-    min-width: 150px;
+    /* min-width: 150px; */
     padding: 8px 20px;
     align-self: center;
     border-radius: 5px;
@@ -66,14 +71,13 @@ body{
     margin: 10px;
     padding: 3px;
     position: relative;
-    /* min-width: 200px; */
-    min-width: 210px;
-    max-width: 230px;
+    min-width: 180px;
+    max-width: 200px;
     
 }
 .image{
-    height: 300px;
-    width: 250;
+    height: 250px;
+    width: 200px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -94,7 +98,11 @@ body{
     justify-content: space-around;
     width: 100% ;
     align-items: baseline;
+    /* margin-bottom: 0; */
     /* text-align: center; */
+}
+.price{
+    /* margin-top: 0; */
 }
 .title{
     /* overflow-wrap: break-word; */
@@ -137,4 +145,59 @@ body{
     background-color: #1d1e22 ;
     color: #fff;
     cursor: pointer;
+}
+
+/* styling for up to 767px */
+@media screen and (min-width:1024px)  {
+    .heading{
+        margin-top: 8%;
+        font-size: 5vh;
+    }
+    .category{
+        padding: 1vh 5vw;
+        margin: 10px;
+        font-size: 3vh;
+    }
+    .products-container{
+        width: 10vw;
+        height: 20vh;
+    }
+    .image{
+        height: 20vh;
+        width: 100%;
+        border-radius: ;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .categorys{
+        margin: none;
+        gap: none;
+        flex-wrap: wrap;
+    }
+    .category{
+        padding: none;
+        width: 120px;
+        /* flex-wrap: nowrap; */
+        max-height: 20px;
+    }
+    .icon{
+        height: 15px;
+        width: 15px;
+        align-items: baseline;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .heading{
+        margin-top: 8%;
+        font-size: 40px;
+    }
+    .category{
+        padding: 10px 50px;
+        margin: 10px;
+    }
+    .product{
+        /* max-width: 20%; */
+    }
 }
